@@ -1,0 +1,8 @@
+while True:
+    a,b = list(map(int, input().split()))
+    if a == 0 and b==0:
+        break
+    else:
+        print(a+b)
+        
+## 입력 갯수가 주어지지 않을 땐 먼저 While loop 문 생각!!
