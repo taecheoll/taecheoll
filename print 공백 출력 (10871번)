@@ -1,0 +1,10 @@
+count, n = list(map(int, input().split()))
+a= list(map(int, input().split()))
+
+for i in range(count):
+    if a[i] < n:
+        print(a[i], end=" ")  
+  
+  
+## 일반적으로 print 사용시 출력 후 자동으로 개행(다음줄)하게 되어있는데 end=" "를 사용함으로써 공백으로 출력
+        
