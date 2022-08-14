@@ -1,0 +1,8 @@
+while True:
+    try:
+        a,b = list(map(int, input().split()))
+        print(a+b)
+    except:
+        break 
+        
+## if,else문 처럼 While도 try,except 가능하다!!
