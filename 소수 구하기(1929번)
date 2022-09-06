@@ -1,0 +1,24 @@
+import math
+
+a, b = map(int, input().split())
+
+array = [True for i in range(b+1)]
+
+for i in range(2, int(math.sqrt(b))+1):
+    if array[i] == True:
+        j =2
+        while i * j <= b:
+            array[i*j] = False
+            j += 1
+
+        
+for i in range(a, b+1):
+    if a == 1:
+        array[a] = False
+        
+        
+    if array[i] == True:
+        print(i)
+        
+        
+## 모든 범위를 다 구하지 않고 root로 범위를 잘라서 배수를 구한다.
