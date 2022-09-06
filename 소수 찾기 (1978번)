@@ -1,0 +1,26 @@
+def prime(k):
+    
+    if k < 2 :
+        return False
+    
+    elif k == 2 :
+        return True
+    
+    else:
+        for i in range(2, k):
+            if k % i == 0:
+                return False
+        return True
+            
+n = int(input())
+a = list(map(int, input().split()))
+p_num = []
+
+for i in range(len(a)):
+    if prime(a[i]) == True:
+        p_num.append(a[i])
+
+        
+print(len(p_num))
+
+# 함수 내에서 return을 만나면 그 자리에서 바로 종료된다. 따라서 맞는것을 고르는 return을 들여쓰기 하지 않고 진행한다.
