@@ -1,0 +1,17 @@
+n = int(input())
+
+for i in range(n):
+    count=1
+    sum=0
+    ans=list(map(str, input()))
+    
+    for j in ans:
+        if j == "O":
+            sum += count
+            count += 1
+        else:
+            count=1
+    
+    print(sum)
+    
+    ## for문 in 뒤에 리스트가 대입되는 개념이다. ex) ans= [O,X,O,O]이면 j = O, X, O, O 순으로 들어간다.
