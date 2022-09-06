@@ -1,0 +1,24 @@
+def gcd(m, n):
+
+    while True:
+        
+        if n == 0:
+            break
+        
+        else:
+            r = m % n
+            m = n
+            n = r
+    
+    return m
+
+a,b = list(map(int, input().split()))
+
+gcd_value = gcd(a,b)
+print(gcd_value)
+
+lcm = (a*b)/gcd_value         
+print(int(lcm))
+
+#최대공약수는 유클리드 호제법을 이용하여 구한다. GCD(A, B) = GCD(B,r) // r = a % b
+#최소공배수는 A * B = GCD* LCM 을 이용하면 LCM = (A*B)/GCD 로 구한다.
