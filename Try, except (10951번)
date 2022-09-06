@@ -5,4 +5,4 @@ while True:
     except:
         break 
         
-## if,else문 처럼 While도 try,except 가능하다!!
+## if,else문과  while의 try, except는 같은 개념이다.
