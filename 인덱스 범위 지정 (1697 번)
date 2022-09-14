@@ -1,0 +1,27 @@
+from collections import deque
+
+n, k = map(int, input().split())
+
+max = 10**5  ## 1e9로 설정하면 N의 범위를 초과해 메모리 제한 오류
+d = [0]* (max+1) # N의 인덱스 는 10**5 까지 때문에 +1을 해주어야 한다.
+
+def bfs(x):
+    queue=deque()
+    queue.append(x)
+
+    while queue:
+        x = queue.popleft()
+        case=[x-1, x+1, 2*x]
+        if x == k:
+            print(d[x])
+            break
+            
+            
+        for i in case:
+            if 0 <= i <= max and not d[i]:  ## N의 범위가 100,000을 넘어가는 경우를 고려하기 위해 i의 범위 설정 필수
+                d[i] = d[x] +1
+                queue.append(i)
+            
+            
+            
+bfs(n)
